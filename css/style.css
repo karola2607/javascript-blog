@@ -16,8 +16,6 @@ body {
   line-height: 1.7;
 }
 
-/*@media (max-width: 991px)
-@media (max-width: 375px)*/
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -36,6 +34,13 @@ body {
   color: #777777;
 }
 
+@media (max-width: 991px) {
+  .section-title:first-of-type {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
 /* Layout */
 .wrapper {
   display: -ms-flexbox;
@@ -43,9 +48,24 @@ body {
   margin-left: 10px;
 }
 
+@media (max-width: 991px) {
+  .wrapper {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+}
+
 .sidebar {
   -ms-flex: 1 0 0px;
       flex: 1 0 0;
+}
+
+@media (max-width: 991px) {
+  .sidebar:first-of-type {
+    background: none;
+    border: none;
+    padding-top: 0;
+  }
 }
 
 .posts {
@@ -70,6 +90,12 @@ body {
   text-align: center;
 }
 
+@media (max-width: 991px) {
+  .logo {
+    padding-left: 20px;
+  }
+}
+
 /* Lists */
 .list {
   list-style-type: none;
@@ -83,6 +109,21 @@ body {
 
 .list-horizontal li {
   display: inline-block;
+}
+
+@media (max-width: 991px) {
+  .sidebar:first-of-type .list li {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    border: solid 2px #dfe6e9;
+    background: #fff;
+  }
+  .sidebar:first-of-type .list li a:link, .sidebar:first-of-type .list li a:visited {
+    color: #444;
+    text-decoration: none;
+  }
 }
 
 /* Authors */
