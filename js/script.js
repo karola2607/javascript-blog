@@ -140,13 +140,12 @@ function generateTags(){
 
     for(let tag of articleTagsArray) {
 
-      /* [IN PROGRESS] generate HTML of the link */
+      /* [DONE] generate HTML of the link */
 
-    const tag = articleTagsArray.querySelectorAll('data-tags');
     const tagHTML = '<li><a href="#tag-' + tag + '"><span>' + tag + '</span></a></li>';
-    console.log(tagHTML);
+    
 
-      /* add generated code to html variable */
+      /* [DONE] add generated code to html variable */
 
       html = html + tagHTML;
     }
@@ -154,11 +153,12 @@ function generateTags(){
     /* END LOOP: for each tag */
 
     /* insert HTML of all the links into the tags wrapper */
-
-
+    titleList.innerHTML = html;
+ 
   }
 
   /* END LOOP: for every article: */
 }
 
 generateTags();
+
