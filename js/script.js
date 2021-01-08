@@ -74,8 +74,6 @@ function generateTitleLinks(customSelector = ''){
   let html = '';
 
   for(let article of articles){
-    article.addEventListener('click', generateTitleLinks);
-	
 
     /* [DONE] get the article id */
   
@@ -116,8 +114,6 @@ function generateTags(){
   /* [DONE] START LOOP: for every article: */
 
   for(let article of articles){
-    article.addEventListener('click', generateTitleLinks);
-
 
     /* [DONE] find tags wrapper */
 
@@ -210,8 +206,8 @@ function tagClickHandler(event){
 
 function addClickListenersToTags(){
   /* find all links to tags */
-  const allLinks = document.querySelectorAll('.data-tags');
-
+  const allLinks = document.querySelectorAll('.post-tags a');
+  
   /* START LOOP: for each link */
   for(let allLink of allLinks){
     
@@ -233,8 +229,6 @@ function generateAuthors () {
 
   /* [DONE] START LOOP: for every article: */
   for(let article of articles){
-    article.addEventListener('click', generateTitleLinks);
-
 
     /* [DONE] find authors wrapper */
     const titleList = article.querySelector(optArticleAuthorSelector);
@@ -243,7 +237,7 @@ function generateAuthors () {
     let html = '';
 
     /* [DONE] get authors from .data-author attribute */
-    const articleAuthor = article.getAttribute('.data-author');
+    const articleAuthor = article.getAttribute('data-author');
     
 
       /* [DONE] generate HTML of the link */
@@ -314,7 +308,7 @@ function authorClickHandler(event){
 
 function addClickListenersToAuthors(){
   /* find all links to authors */
-  const allAuthorsLinks = document.querySelectorAll('data-author');
+  const allAuthorsLinks = document.querySelectorAll('.post-author a');
 
   /* START LOOP: for each link */
   for(let allAuthorsLink of allAuthorsLinks){
