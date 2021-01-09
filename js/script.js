@@ -107,6 +107,28 @@ generateTitleLinks();
 
 
 
+function calculateTagsParams(tags){
+
+  const params = {'max': 0 , 'min': 999999};
+
+  for (let tag in tags){
+    console.log(tag + ' is used' + tags[tag] + 'times');
+
+    if(tags[tag] > params.max){
+    params.max = tags[tag];
+    }
+
+    if(tags[tag] < params.min){
+    params.min = tags[tag];
+    }
+
+  
+  }
+  return params;
+}
+
+
+
 function generateTags(){
 /* [DONE] create a new variable allTags with an empty object */
   let allTags = {};
@@ -173,12 +195,17 @@ function generateTags(){
   /* [DONE] create variable for all links HTML code */
   let allTagsHTML = '';
 
+  const tagsParams = calculateTagsParams(allTags);
+  console.log('tagsParams:', tagsParams);
+
+
+
   /* [DONE] START LOOP: for each tag in allTags: */
   for(let tag in allTags){
       
     /* [NEW] generate code of a link and add it to allTagsHTML */
     allTagsHTML += '<li><a href="#tag-' +  tag + '">' + tag + '</a><span>' + allTags[tag] + '</span></li>';
-    console.log(allTagsHTML);
+    
      
   /* [NEW] END LOOP: for each tag in allTags */
  }
