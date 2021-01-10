@@ -117,16 +117,16 @@ body {
 }
 
 .sidebar:first-of-type .list li {
+    & a:link, a:visited {
+    text-decoration: none;
+    color: $color-dark;
+  }
     @media (max-width: 991px) {
     display: flex;
     justify-content: center;
     border: solid 2px #dfe6e9;
     background: $color-light;
 
-    & a:link, a:visited {
-    color: $color-dark;
-    text-decoration: none;
-}
     }
   }
 
@@ -152,6 +152,17 @@ body {
 
 .post-author {
   font-style: italic;
+  list-style-type: none;
+  li {
+    & a:link, a:visited {
+      text-decoration: none;
+      color: $color-dark;
+      }
+     }
+}
+
+.post-title, .post-author {
+  text-align: center;
 }
 
 .post-tags {
@@ -159,25 +170,54 @@ body {
   p {
     margin: 0 10px 0 0;
   }
+
+  ul li {
+    padding-right: 3px;
+    & a:link, a:visited {
+      text-decoration: none;
+      color: $color-dark;
+  }
+ }
 }
 
-/*Font size of tags */
+
+.sidebar:nth-of-type(2) ul li{
+  display: inline-flex;
+  padding-right: 3px;
+
+  & a:link, a:visited {
+    text-decoration: none;
+  }
+}
+
+.authors li {
+  & a:link, a:visited {
+    color: $color-dark;
+  }
+}
+
+/* Font size of tags */
 .tag-size-1 {
-  font-size: 15px;
+  font-size: 20px;
+  color: #b2bec3;
 }
 
 .tag-size-2 {
-  font-size: 20px;
+  font-size: 24px;
+  color: #b2bec3;
 }
 
 .tag-size-3 {
-  font-size: 22px;
+  font-size: 26px;
+  color: #636e72;
 }
 
 .tag-size-4 {
   font-size: 30px;
+  color: #2d3436;
 }
 
 .tag-size-5 {
   font-size: 38px;
+  color: #2d3436;
 }

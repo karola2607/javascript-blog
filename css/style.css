@@ -111,6 +111,11 @@ body {
   display: inline-block;
 }
 
+.sidebar:first-of-type .list li a:link, .sidebar:first-of-type .list li a:visited {
+  text-decoration: none;
+  color: #444;
+}
+
 @media (max-width: 991px) {
   .sidebar:first-of-type .list li {
     display: -ms-flexbox;
@@ -119,10 +124,6 @@ body {
         justify-content: center;
     border: solid 2px #dfe6e9;
     background: #fff;
-  }
-  .sidebar:first-of-type .list li a:link, .sidebar:first-of-type .list li a:visited {
-    color: #444;
-    text-decoration: none;
   }
 }
 
@@ -142,6 +143,16 @@ body {
 
 .post-author {
   font-style: italic;
+  list-style-type: none;
+}
+
+.post-author li a:link, .post-author li a:visited {
+  text-decoration: none;
+  color: #444;
+}
+
+.post-title, .post-author {
+  text-align: center;
 }
 
 .post-tags {
@@ -153,24 +164,52 @@ body {
   margin: 0 10px 0 0;
 }
 
-/*Font size of tags */
+.post-tags ul li {
+  padding-right: 3px;
+}
+
+.post-tags ul li a:link, .post-tags ul li a:visited {
+  text-decoration: none;
+  color: #444;
+}
+
+.sidebar:nth-of-type(2) ul li {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-right: 3px;
+}
+
+.sidebar:nth-of-type(2) ul li a:link, .sidebar:nth-of-type(2) ul li a:visited {
+  text-decoration: none;
+}
+
+.authors li a:link, .authors li a:visited {
+  color: #444;
+}
+
+/* Font size of tags */
 .tag-size-1 {
-  font-size: 15px;
+  font-size: 20px;
+  color: #b2bec3;
 }
 
 .tag-size-2 {
-  font-size: 20px;
+  font-size: 24px;
+  color: #b2bec3;
 }
 
 .tag-size-3 {
-  font-size: 22px;
+  font-size: 26px;
+  color: #636e72;
 }
 
 .tag-size-4 {
   font-size: 30px;
+  color: #2d3436;
 }
 
 .tag-size-5 {
   font-size: 38px;
+  color: #2d3436;
 }
 /*# sourceMappingURL=style.css.map */
