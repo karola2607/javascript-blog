@@ -1,1 +1,1 @@
-# javascript-blog
+# Bootcamp Kodilla Project
